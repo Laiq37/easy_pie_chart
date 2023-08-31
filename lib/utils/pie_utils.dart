@@ -58,27 +58,32 @@ bool isCurrentPieTap(double startAngle, double sweepAngle, double tapAngle) {
 int? getIndexOfTappedPie(
     List<double> pieValues, double total, double gap, startAngle, tapAngle) {
   for (int i = 0; i < pieValues.length; i++) {
-    double pieAngle = (2 *
-            pi *
-            (pieValues[i] / total)) *
-        180 /
-        pi;
+    double pieAngle = (2 * pi * (pieValues[i] / total)) * 180 / pi;
     double j = 0;
     while (j <= (gap > 0.0 ? i % 2 : 0)) {
-      double sweepAngle = (startAngle +(pieAngle * (gap > 0.0 && i % 2 == 1 ? 0.25 : 1))) % 360;
+      double sweepAngle =
+          (startAngle + (pieAngle * (gap > 0.0 && i % 2 == 1 ? 0.25 : 1))) %
+              360;
       if (isCurrentPieTap(startAngle, sweepAngle, tapAngle)) {
         final int index = gap > 0.0
             ? i % 2 == 1
                 ? j == 0
-                    ? (i - 1)~/2
+                    ? (i - 1) ~/ 2
                     : i + 1 < pieValues.length
-                        ? (i + 1)~/2
+                        ? (i + 1) ~/ 2
                         : 0
                 : i ~/ 2
             : i;
         return index;
       }
-      startAngle = (startAngle + (pieAngle * (gap > 0.0 && i % 2 == 1 ? j == 0 ? 0.75 : 0.25 : 1))) % 360;
+      startAngle = (startAngle +
+              (pieAngle *
+                  (gap > 0.0 && i % 2 == 1
+                      ? j == 0
+                          ? 0.75
+                          : 0.25
+                      : 1))) %
+          360;
       j++;
     }
   }

@@ -5,11 +5,13 @@ The **Easy Pie Chart** package provides a versatile pie chart widget for Flutter
 ## Features
 
 - Three Pie Chart Variants:
+
   - Crust: Only border, no fill.
   - TriCrust: Borders around each pie slice.
   - Fill: Filled pie slices.
 
 - Interactive Pie Slices:
+
   - Each pie slice is interactive and responds to user taps.
 
 - Customization Options:
@@ -29,13 +31,14 @@ dependencies:
 ```
 
 Then, import the package in your Dart file:
+
 ```dart
 import 'package:easy_pie_chart/easy_pie_chart.dart';
 ```
 
 ## Usage
 
-Here's a simple example of creating a Easy pie chart: 
+Here's a simple example of creating a Easy pie chart:
 
 ```dart
 PieChart(
@@ -45,6 +48,7 @@ PieChart(
   ],
 )
 ```
+
 <p align="center">
   <img src="https://github.com/Laiq37/easy_pie_chart/raw/main/demo/gif/easy_pie_chart_demo.gif" width="225" height="500" alt="Demo GIF">
 </p>
@@ -53,28 +57,28 @@ For more examples, check out the /example folder in this repository.
 
 ## Properties
 
-
-| Name            | Description                                                   | Default Value   | Data Type           | Required |
-|-----------------|---------------------------------------------------------------|-----------------|---------------------|----------|
-| children        |List of PieData objects representing each pie slice.           |        -        |    List<PieData>    |    Yes   |
-| showValue       | Determines whether the value is shown on each pie slice.      |      true       |        bool         |    No    |
-| start           | Starting angle of the pie chart in degrees.                   |      -90        |       double        |    No    |
-| gap             | Gap between pie chart slices.                                 |      0.0        |       double        |    No    |
-| borderWidth     | Width of the border for crust and triCrust pie types.         |      30.0       |       double        |    No    |
-| borderEdge      | Edge shape of the border for crust pie type.                  | StrokeCap.round |      StrokeCap      |    No    |
-| shouldAnimate   | Determines if the pie chart animates clockwise during build.  |      true       |        bool         |    No    |
-| animateDuration | Duration of the animation.                                    |      1500ms     |      Duration?      |    No    |
-| animateFromEnd  | If true, animation starts anti-clockwise.                     |      false      |        bool         |    No    |
-| centerText      | Text to be displayed at the center of the pie chart.          |      null       |       String?       |    No    |
-| style           | TextStyle for centerText.                                     |      null       |     TextStyle?      |    No    |
-| centerStyle     | TextStyle for the value displayed on each pie slice.          |      null       |     TextStyle?      |    No    |
-| pieType         | Enum defining the pie chart type (crust, triCrust, fill).     |  PieType.crust  |       PieType       |    No    |
-| onTap           | Function triggered when a pie slice is tapped.                |      null       | void Function(int)? |    No    |
-| size            | Size of the pie chart.                                        |      200.0      |       double        |    No    |
+| Name            | Description                                                  | Default Value   | Data Type           | Required |
+| --------------- | ------------------------------------------------------------ | --------------- | ------------------- | -------- |
+| children        | List of PieData objects representing each pie slice.         | -               | List<PieData>       | Yes      |
+| showValue       | Determines whether the value is shown on each pie slice.     | true            | bool                | No       |
+| start           | Starting angle of the pie chart in degrees.                  | -90             | double              | No       |
+| gap             | Gap between pie chart slices.                                | 0.0             | double              | No       |
+| borderWidth     | Width of the border for crust and triCrust pie types.        | 30.0            | double              | No       |
+| borderEdge      | Edge shape of the border for crust pie type.                 | StrokeCap.round | StrokeCap           | No       |
+| shouldAnimate   | Determines if the pie chart animates clockwise during build. | true            | bool                | No       |
+| animateDuration | Duration of the animation.                                   | 1500ms          | Duration?           | No       |
+| animateFromEnd  | If true, animation starts anti-clockwise.                    | false           | bool                | No       |
+| centerText      | Text to be displayed at the center of the pie chart.         | null            | String?             | No       |
+| style           | TextStyle for centerText.                                    | null            | TextStyle?          | No       |
+| centerStyle     | TextStyle for the value displayed on each pie slice.         | null            | TextStyle?          | No       |
+| pieType         | Enum defining the pie chart type (crust, triCrust, fill).    | PieType.crust   | PieType             | No       |
+| onTap           | Function triggered when a pie slice is tapped.               | null            | void Function(int)? | No       |
+| size            | Size of the pie chart.                                       | 200.0           | double              | No       |
 
 ## Contribution and Issues
 
 Contributions and bug reports are welcome! Feel free to create pull requests and issues on the GitHub repository.
 
 ## License
+
 This package is available under the **MIT License**.
