@@ -1,6 +1,6 @@
 name: easy_pie_chart
 description: The Easy Pie Chart package provides a versatile pie chart widget for Flutter applications. It offers various customization options to create interactive and visually appealing pie charts.
-version: 0.0.1
+version: 1.0.0
 homepage: https://github.com/Laiq37/easy_pie_chart.git
 github: https://github.com/Laiq37/easy_pie_chart.git
 
