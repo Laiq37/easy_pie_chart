@@ -45,6 +45,9 @@ PieChart(
   ],
 )
 ```
+<p align="center">
+  <img src="https://github.com/Laiq37/easy_pie_chart/raw/main/demo/gif/easy_pie_chart.gif" width="250" height="500" alt="Demo GIF">
+</p>
 
 For more examples, check out the /example folder in this repository.
 
