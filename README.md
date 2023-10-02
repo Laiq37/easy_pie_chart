@@ -30,6 +30,12 @@ dependencies:
   easy_pie_chart: ^version
 ```
 
+or simply run the command in your terminal at project root directory
+
+```
+flutter pub add easy_pie_chart
+```
+
 Then, import the package in your Dart file:
 
 ```dart
@@ -75,9 +81,19 @@ For more examples, check out the /example folder in this repository.
 | onTap           | Function triggered when a pie slice is tapped.               | null            | void Function(int)? | No       |
 | size            | Size of the pie chart.                                       | 200.0           | double              | No       |
 
-## Contribution and Issues
+## Contribution
 
-Contributions and bug reports are welcome! Feel free to create pull requests and issues on the GitHub repository.
+**Easy Pie Chart** is **100% free** and **open source**. We encourage and support an active, healthy community that accepts contributions from the public &ndash; including you. There are a couple of ways in which you can contribute.
+
+  * Fix a bug
+  * Write and improve some **documentation**. Documentation is very critical to us. We would appreciate help in adding multiple languages to our docs.
+  * If you are a developer, feel free to check out the source and submit pull requests.
+  * Dig into [**CONTRIBUTING.MD**](CONTRIBUTING.md), which covers submitting bugs, requesting new features, preparing your code for a pull request, etc.
+  * Please don't forget to **like**, **follow**, and **star our repo**!.
+
+## Bugs or Requests
+
+If you encounter any problems feel free to open an [issue](https://github.com/Laiq37/easy_pie_chart/issues/new?template=bug_report.md). If you feel the library is missing a feature, please raise a [ticket](https://github.com/Laiq37/easy_pie_chart/issues/new?template=feature_request.md). Pull request are also welcome.
 
 ## License
 
