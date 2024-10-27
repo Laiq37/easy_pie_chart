@@ -5,7 +5,7 @@ class _PieChartPainter extends CustomPainter {
   final bool showValue;
   final List<PieData> pies;
   final double total;
-  double startAngle;
+  final double startAngle;
   final PieType pieType;
   final StrokeCap borderEdge;
   final double gap;
@@ -30,13 +30,16 @@ class _PieChartPainter extends CustomPainter {
     this.style,
     this.centerStyle,
   });
+
   late double sweepRadian;
+
+  late double startAngleRadian;
 
   @override
   void paint(Canvas canvas, Size size) {
-    /// [startAngle] is the point from where PieChart begins
+    // [startAngleRadian] is the point from where PieChart begins
     /// converting angle from degree to radian
-    startAngle *= pi / 180;
+    startAngleRadian = startAngle * (pi / 180);
 
     ///looping through pie values to draw arcs
     for (int i = 0; i < pieValues.length; i++) {
@@ -102,7 +105,7 @@ class _PieChartPainter extends CustomPainter {
       ..strokeCap = borderEdge;
     canvas.drawArc(
       rect,
-      startAngle,
+      startAngleRadian,
       sweepRadian,
 
       /// If [pieType] is set to "crust," the border will be placed on the outer layer of the pie chart.
@@ -114,7 +117,7 @@ class _PieChartPainter extends CustomPainter {
 
   void showPieText(double pieValue, double radius, Size size, Canvas canvas) {
     /// Calculate text position at the center of the border partition
-    final textAngle = startAngle + (sweepRadian) / 2;
+    final textAngle = startAngleRadian + (sweepRadian) / 2;
 
     // Adjusts the text position according to PieType
     final textRadius =
@@ -134,7 +137,7 @@ class _PieChartPainter extends CustomPainter {
   }
 
   updateStartAngle() {
-    startAngle += sweepRadian;
+    startAngleRadian += sweepRadian;
   }
 
   drawCenterText(Canvas canvas, Size size) {
