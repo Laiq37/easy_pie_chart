@@ -6,7 +6,7 @@ class EasyPieChart extends StatelessWidget {
   ///
   /// Example usage:
   /// ```dart
-  /// PieChart(
+  /// EasyPieChart(
   ///   children: [
   ///     PieData(value: 30, color: Colors.red),
   ///     PieData(value: 50, color: Colors.blue),

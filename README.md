@@ -47,7 +47,7 @@ import 'package:easy_pie_chart/easy_pie_chart.dart';
 Here's a simple example of creating a Easy pie chart:
 
 ```dart
-PieChart(
+EasyPieChart(
   children: [
     PieData(value: 30, color: Colors.red),
     PieData(value: 50, color: Colors.blue),
